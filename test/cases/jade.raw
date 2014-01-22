@@ -1,0 +1,6 @@
+div
+  span
+  //something
+    .foo
+    #bar.baz
+  extend $lorem

@@ -1,0 +1,6 @@
+div
+  color: blue;
+  bg: red;
+
+  @media print
+    width: (2 + 2)

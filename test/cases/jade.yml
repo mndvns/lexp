@@ -1,0 +1,45 @@
+tokens:
+  - type: tag
+    line: 1
+    val: div
+
+  - type: indent
+
+  - type: tag
+
+  - type: newline
+
+  - type: comment
+    val: something
+
+  - type: indent
+
+  - type: class
+    val: foo
+
+  - type: newline
+
+  - type: id
+    val: bar
+    line: 5
+
+  - type: class
+    val: baz
+    line: 5
+
+  - type: outdent
+
+  - type: extend
+    val: $lorem
+    line: 6
+
+  - type: outdent
+
+options:
+  - select extend: '^extends? +([^\n]+)'
+    select tag: '^(\w[-:\w]*)'
+    select comment: '^\/\/([^\n]*)'
+    select class: '^\.([\w-]+)'
+    select id: '^#([\w-]+)'
+    select text: '^(?:\| ?| )([^\n]+)'
+    select text: '^(<[^\n]*)'
